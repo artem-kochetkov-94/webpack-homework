@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 
-
-import './styles.css';
+import "./styles.css";
 
 export default class Textarea extends React.PureComponent {
   constructor(props) {
@@ -14,17 +13,19 @@ export default class Textarea extends React.PureComponent {
     const { name, label, value, className } = this.props;
 
     return (
-      <div className={`textarea ${className || ''}`}>
-        <label htmlFor={name} className='textarea__label'>{label}</label>
+      <div className={`textarea ${className || ""}`}>
+        <label htmlFor={name} className="textarea__label">
+          {label}
+        </label>
         <textarea
-          className='textarea__input'
+          className="textarea__input"
           name={name}
           id={name}
           value={value}
           onChange={this.onChange}
         />
       </div>
-    )
+    );
   }
 
   onChange(e) {

@@ -1,12 +1,7 @@
-import React from 'react';
+import React from "react";
 
-
-import './styles.css';
+import "./styles.css";
 
 export default function Title({ children }) {
-  return (
-    <h1 className='title'>
-      {children}
-    </h1>
-  )
+  return <h1 className="title">{children}</h1>;
 }

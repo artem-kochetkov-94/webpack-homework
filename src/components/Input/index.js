@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 
-
-import './styles.css';
+import "./styles.css";
 
 export default class Input extends React.PureComponent {
   constructor(props) {
@@ -14,10 +13,12 @@ export default class Input extends React.PureComponent {
     const { name, label, value, className } = this.props;
 
     return (
-      <div className={`input ${className || ''}`}>
-        <label htmlFor={name} className='input__label'>{label}</label>
+      <div className={`input ${className || ""}`}>
+        <label htmlFor={name} className="input__label">
+          {label}
+        </label>
         <input
-          className='input__input'
+          className="input__input"
           type="text"
           name={name}
           id={name}
@@ -25,7 +26,7 @@ export default class Input extends React.PureComponent {
           onChange={this.onChange}
         />
       </div>
-    )
+    );
   }
 
   onChange(e) {
